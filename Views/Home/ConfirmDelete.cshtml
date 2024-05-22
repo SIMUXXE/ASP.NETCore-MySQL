@@ -1,0 +1,9 @@
+﻿@model Progetto_Tipsit___Gestione_Persona.Models.DeleteModel;
+@{
+    ViewData["title"] = "Confermare?";
+}
+<div class="text-center">
+    <h1>Confermare la cancellazione della Persona (id=@Model.Id)?</h1>
+    <a asp-action="Index" asp-controller="Home" class="btn btn-outline-secondary">Torna indietro</a>
+    <a asp-action="DeletePerson" asp-controller="Home" class="btn btn-outline-danger" asp-route-id="@Model.Id">Cancella persona</a>
+</div>

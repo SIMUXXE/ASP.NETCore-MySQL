@@ -1,0 +1,26 @@
+﻿@model List<Person>
+@{
+    ViewData["Title"] = "lista Persona";
+}
+
+<div class="row">
+    <table class="table table-striped">
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Cognome</td>
+            <td>Età</td>
+        </tr>
+        @foreach (Person obj in Model)
+        {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.FirstName</td>
+                <td>@obj.LastName</td>
+                <td>@obj.Age</td>
+                <td><a asp-action="UpdateForm" asp-controller="Home" class="btn btn-outline-secondary" asp-route-PersonaId="@obj.Id">Modifica persona</a></td>
+                <td><a asp-action="ConfirmDelete" asp-controller="Home" class="btn btn-outline-danger" asp-route-PersonaId="@obj.Id">Cancella persona</a></td>
+            </tr>
+        }
+    </table>
+</div>

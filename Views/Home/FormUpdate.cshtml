@@ -1,0 +1,36 @@
+﻿@model Progetto_Tipsit___Gestione_Persona.Models.UpdateModel;
+@{
+    ViewData["title"] = "Aggiorna dati";
+}
+<div class="row">
+	<h1>Id Persona: @ViewBag.PersonaId</h1>
+	<div class="col-md-4">
+		
+		<form asp-action="EditPerson" method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<select asp-for="Field" class="form-control border border-primary">
+					<option selected>Seleziona campo da modificare</option>
+					<option value="firstName">Nome</option>
+					<option value="lastName">Cognome</option>
+					<option value="age">Età</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Value" class="control-label text-primary"></label>
+				<input asp-for="Value" class="form-control border border-primary" />
+				<span asp-validation-for="Value" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="PId" class="control-label text-primary"></label>
+				<input asp-for="PId" value="@Model.PId" class="form-control border border-primary" />
+				<span asp-validation-for="PId" class="text-danger"></span>
+			</div>
+
+			<br />
+			<button type="submit" class="btn btn-outline-primary">Submit</button>
+		</form>
+	</div>
+</div>

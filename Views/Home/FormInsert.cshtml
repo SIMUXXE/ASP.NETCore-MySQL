@@ -1,0 +1,32 @@
+﻿@model Progetto_Tipsit___Gestione_Persona.Models.Person;
+@{
+    ViewData["title"] = "registra Persona";
+}
+<h1>@ViewData["title"]</h1>
+<div class="row">
+
+	<div class="col-md-4">
+
+		<form asp-action="AddPerson" method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="FirstName" class="control-label text-primary"></label>
+				<input asp-for="FirstName" class="form-control border border-primary" />
+				<span asp-validation-for="FirstName" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="LastName" class="control-label text-primary"></label>
+				<input asp-for="LastName" class="form-control border border-primary" />
+				<span asp-validation-for="LastName" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Age" class="control-label text-primary"></label>
+				<input asp-for="Age" class="form-control border border-primary" />
+				<span asp-validation-for="Age" class="text-danger"></span>
+			</div>
+			<br />
+			<button type="submit" class="btn btn-outline-primary">Submit</button>
+		</form>
+	</div>
+</div>
