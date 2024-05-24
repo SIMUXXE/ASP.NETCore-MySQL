@@ -8,7 +8,7 @@ namespace Progetto_Tipsit___Gestione_Persona.Controllers
 {
     public class DAO
     {
-        const string connectionString = "Server=89.58.59.59;Port=3306;Database=s117_PersonaDB;Uid=u117_g1bjcGAAku;Pwd=2cZV9obe.apAp+O!STnLYQSX";
+        const string connectionString = "Server=;Port=;Database=;Uid=;Pwd=";
         MySqlConnection connection = new MySqlConnection(connectionString);
 
         public bool Create(Person person)
